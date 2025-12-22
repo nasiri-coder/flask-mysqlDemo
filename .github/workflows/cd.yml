@@ -23,5 +23,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t tonusername/flask_devops_demo:latest .
-          docker push tonusername/flask_devops_demo:latest
+          docker build -t nasiricoder26/flask_devops_demo:latest .
+          docker push nasiricoder26/flask_devops_demo:latest
