@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello DevOps Student! CI/CD  is working after update 2."
+    return "Hello DevOps Student! CI/CD  is NOT working after update 2."
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
