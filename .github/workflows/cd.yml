@@ -25,8 +25,8 @@ jobs:
         run: |
           docker build -t nasiricoder26/flask_devops_demo:latest .
           docker push nasiricoder26/flask_devops_demo:latest
-       name: Deploy to Windows via SSH
+      - name: Deploy to Windows via SSH
         run: |
           echo "${{ secrets.SSH_KEY }}" > key.pem
           chmod 600 key.pem
-          ssh -i key.pem -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" "powershell -ExecutionPolicy Bypass -File 'C:\\Users\\nasir\\OneDrive\\Documents\\scriptsh.ps1'"
+          ssh -i key.pem -o StrictHostKeyChecking=no "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" "powershell -ExecutionPolicy Bypass -File 'C:\\Users\\nasir\\OneDrive\\Documents\\deploy.ps1'"
